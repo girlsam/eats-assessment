@@ -1,0 +1,21 @@
+/* add custom styles */
+nav {
+  background-color: grey;
+  margin: -20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+}
+footer {
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  text-align: center;
+}
+footer p {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: white;
+  display: inline;
+}

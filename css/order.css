@@ -1,0 +1,146 @@
+body {
+  background-color: #000080;
+}
+h1 {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+nav {
+  background-color: grey;
+  margin: -20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 35px;
+}
+input, label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+footer {
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  text-align: center;
+}
+footer p {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: white;
+  display: inline;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  align-content: center;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.menu {
+  height: 200px;
+  width: 260px;
+}
+.menu-box {
+  background: white;
+  align-items: center;
+  padding: 20px;
+  margin-top: 40px;
+  margin-right: 10px;
+  flex: 2 0 0;
+  height: 500px;
+}
+.menu-list {
+  font-family: Arial, sans-serif;
+  font-color: black;
+  font-size: 15px;
+}
+.menu optgroup {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.menu option {
+  color: grey;
+  margin-left: 15px;
+  font-size: 15px;
+  overflow-x: scroll;
+}
+.quant-and-submit input {
+  width: 50px;
+  height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.personal-info, input {
+  width: 600px;
+  height: 25px;
+  display: inline;
+}
+.quant-and-submit, .personal-info {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  padding-top: 10px;
+  dislay: inline;
+}
+.checkout-box {
+  background: white;
+  padding: 20px;
+  margin-top: 40px;
+  margin-right: 10px;
+  flex: 1 0 0;
+  position: relative;
+}
+.checkout-box h2 {
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+.checkout-table {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  text-align: right;
+  /*margin-right: 20px;*/
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+.checkout-table tr:nth-child(3) {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+.checkout-box p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  margin-top: -5px;
+}
+.quantity-submit {
+  font-size: 13px;
+  font-weight: 500;
+  height: 40px;
+  width: 130px;
+  line-height: 40px;
+  margin-left: 10px;
+  padding: 0 25px;
+  background-color: #009ACD;
+  border: none;
+  color: white;
+}
+.personal-info-submit {
+  font-size: 13px;
+  font-weight: 500;
+  height: 50px;
+  width: 605px;
+  line-height: 40px;
+  margin-top: 10px;
+  padding: 0 25px;
+  background-color: #009ACD;
+  border: none;
+  color: white;
+}
