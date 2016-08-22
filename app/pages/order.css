@@ -99,6 +99,7 @@ footer p {
   font-family: Arial, sans-serif;
   font-size: 25px;
   margin-top: -5px;
+  margin-bottom: 5px;
 }
 .checkout-table {
   position: absolute;
