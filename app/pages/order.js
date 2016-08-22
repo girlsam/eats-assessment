@@ -59,7 +59,7 @@ $('.personal-info-submit').on('click', function(event) {
 });
 
 //functions for checkout
-var getSubTotal = function() {
+function getSubTotal() {
   var checkoutSubTotal = 0;
   var quant = $('#quantity').val();
   var itemSubTotal = $('option:selected').val();
@@ -69,4 +69,4 @@ var getSubTotal = function() {
   }
   console.log(checkoutSubTotal);
   $('#subtotal').text(checkoutSubTotal);
-};
+}

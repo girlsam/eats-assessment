@@ -1,26 +1,44 @@
 body {
-  background-color: #eef7fa;
+  background-color: #000080;
 }
 h1 {
   font-family: Arial, sans-serif;
   color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: lighter;
 }
 nav {
   background-color: grey;
   margin: -20px;
   padding-top: 10px;
-  padding-bottom: 1px;
-  padding-left: 25px;
+  padding-bottom: 5px;
+  padding-left: 35px;
 }
 input, label {
   display: inline-block;
   margin-bottom: 5px;
+}
+footer {
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  text-align: center;
+}
+footer p {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: white;
+  display: inline;
 }
 .flex-container {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
   align-content: center;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 .menu {
   height: 200px;
