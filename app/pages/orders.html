@@ -4,17 +4,55 @@
     <meta charset="utf-8">
     <title>Order Page - Galvanize Eats</title>
     <!-- styles -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css"> -->
     <link rel="stylesheet" type="text/css" href="order.css">
   </head>
   <body>
     <nav>
       <h1>Galvanize Eats</h1>
     </nav>
-    <section class="menu-box">
-      <ul class="menu-list"></ul>
-    </section>
-    <section class="checkout-box">
-    </section>
+    <main class="flex-container">
+      <section class="menu-box">
+        <form class="menu-list" method="post">
+          <select class="menu" name="menu" multiple></select>
+          <div class="quant-and-submit">
+            <label for="number">Quantity</label>
+              <input type="number" name="quantity" value="1" id="quantity" min="1">
+            <button type="submit" name="quantity-submit" class="quantity-submit">Add Item</button>
+          </div>
+        </form>
+        <hr>
+        <form class="personal-info" method="post">
+          <label for="fullName">Name</label>
+            <input type="text" name="fullName" id="fullName" placeholder="First and Last Name">
+          <br>
+          <label for="phoneNumber">Phone Number</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="XXX-XXX-XXXX">
+          <br>
+          <label for="streetAddress">Street Address</label>
+            <input type="text" name="streetAddress" id="streetAddress" placeholder="123 Easy St.">
+          <br>
+          <button type="submit" name="personal-info-submit" class="personal-info-submit">Place Order</button>
+        </form>
+      </section>
+      <section class="checkout-box">
+        <h2>Checkout</h2>
+        <table class="checkout-table">
+          <tr>
+            <td>Subtotal</td>
+            <td id="subtotal">$0.00</td>
+          </tr>
+          <tr>
+            <td>Tax</td>
+            <td id="tax">$0.00</td>
+          </tr>
+          <tr>
+            <td>Grand Total</td>
+            <td id="grandtotal">$0.00</td>
+          </tr>
+        </table>
+      </section>
+    </main>
     <!-- scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="order.js"></script>
