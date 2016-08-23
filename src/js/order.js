@@ -10,36 +10,34 @@ $(document).on('ready', function() {
     var menuTypesArr = typeArrAll.filter(function(type, index, inputArray) {
       return inputArray.indexOf(type) === index;
     });
-    // console.log(menuTypesArr);
-    for (var i = 0; i < menuArray.length; i++) {
-      var menuType = menuArray[i].type;
-      var menuItem = menuArray[i].name;
-      var itemPrice = menuArray[i].price;
-      if (menuItem[i].type === menuTypesArr[i]) {
-        // console.log(menuTypesArr[i]);
-        // console.log(menuItem);
-        $('.menu').append('<optgroup label="' + menuType + '"></optgroup>');
-        $('.menu').append('<option value="' + itemPrice + '">' + menuItem + ' - $' + itemPrice + '</option');
-      }
+    for (var i = 0; i < menuTypesArr.length; i++) {
+      $('.menu').append('<optgroup label="' + menuTypesArr[i] + '"></optgroup>');
     }
+    menuArray.forEach(function(items) {
+      $('.menu [label =' + items.type + ']').append('<option value="' + items.price + '"' + 'name="' + items.name + '">' + items.name + ' - $' + items.price + '</option');
+      });
+    });
   });
+
+  //on submit of item quantity
   $('.quantity-submit').on('click', function(event) {
     event.preventDefault();
     var quant = $('#quantity').val();
-    var selectItem = $('.menu option').val();
     var itemCost = $('option:selected').val();
-    console.log(itemCost);
+    var selectItem = $('.menu option:selected').text();
     $('.menu option').each(function() {
       var subTotal = 0;
       if (this.selected === true) {
         for (var i = 0; i < quant; i++) {
           $('.checkout-box').append('<p>' + selectItem + '</p>');
+            $('#subtotal').text(getSubTotal());
+            $('#tax').text(getTaxTotal());
+            $('#grandtotal').text(getGrandTotal());
         }
-        getSubTotal();
       }
     });
   });
-});
+//});
 
 //submit info and "post"
 $('.personal-info-submit').on('click', function(event) {
@@ -68,5 +66,17 @@ function getSubTotal() {
     return checkoutSubTotal;
   }
   console.log(checkoutSubTotal);
-  $('#subtotal').text(checkoutSubTotal);
+}
+
+function getTaxTotal() {
+  var TAX_RATE = 0.15;
+  var taxTotal = 0;
+  taxTotal = parseFloat(parseFloat(getSubTotal() * TAX_RATE).toFixed(2));
+  return taxTotal;
+}
+
+function getGrandTotal() {
+  var total = 0;
+  total = getSubTotal() + getTaxTotal();
+  return total;
 }
