@@ -34,6 +34,7 @@ $(document).on('ready', function() {
             $('#tax').text(getTaxTotal());
             $('#grandtotal').text(getGrandTotal());
         }
+        $('#subTotal').text(getGrandTotal());
       }
     });
   });
@@ -69,7 +70,7 @@ function getSubTotal() {
 }
 
 function getTaxTotal() {
-  var TAX_RATE = 0.15;
+  var TAX_RATE = 0.03;
   var taxTotal = 0;
   taxTotal = parseFloat(parseFloat(getSubTotal() * TAX_RATE).toFixed(2));
   return taxTotal;
@@ -77,6 +78,6 @@ function getTaxTotal() {
 
 function getGrandTotal() {
   var total = 0;
-  total = getSubTotal() + getTaxTotal();
+  total = parseFloat(getSubTotal() + getTaxTotal()).toFixed(2);
   return total;
 }
