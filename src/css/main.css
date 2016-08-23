@@ -1,6 +1,16 @@
-/* add custom styles */
-nav {
-  background-color: grey;
+body {
+  background-color: #000080;
+}
+h1 {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+header {
+  background-color: black;
+  opacity: 0.8;
   margin: -20px;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -8,14 +18,54 @@ nav {
 }
 footer {
   background-color: grey;
-  padding-top: 10px;
+  /*padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 35px;
+  padding-left: 35px;*/
   text-align: center;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
 }
 footer p {
   font-family: Arial, sans-serif;
   font-size: 10px;
   color: white;
   display: inline;
+}
+.flex-container p {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 90px;
+  color: white;
+}
+.main-img {
+  background-image: url(../media/restaurant-hero-image.jpg);
+  position: absolute;
+  //margin-top: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+}
+.order-button {
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 50px;
+  width: 605px;
+  line-height: 40px;
+  display: inline-block;
+  margin-left: 25%;
+  margin-bottom: 20px;
+  padding: 10px 0 0 25px;
+  background-color: #009ACD;
+  border: none;
+  color: white;
+  position: absolute;
+  bottom: 0;
 }
