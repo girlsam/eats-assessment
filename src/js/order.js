@@ -28,14 +28,17 @@ $(document).on('ready', function() {
     $('.menu option').each(function() {
       var subTotal = 0;
       if (this.selected === true) {
-        for (var i = 0; i < quant; i++) {
+        for (var i = 0; i < this.selected; i++) {
           $('.checkout-box').append('<p>' + selectItem + '</p>');
-            $('#subtotal').text(getSubTotal());
-            $('#tax').text(getTaxTotal());
-            $('#grandtotal').text(getGrandTotal());
+            addPriceToDOM();
+            if (checkoutSubTotal !== 0) {
+              $('#subtotal').text(checkoutSubTotal += getSubTotal());
+              $('#tax').text(getTaxTotal());
+              $('#grandtotal').text(getGrandTotal());
+            }
+          }
         }
         $('#subTotal').text(getGrandTotal());
-      }
     });
   });
 //});
@@ -80,4 +83,10 @@ function getGrandTotal() {
   var total = 0;
   total = parseFloat(getSubTotal() + getTaxTotal()).toFixed(2);
   return total;
+}
+
+function addPriceToDOM() {
+  $('#subtotal').text(getSubTotal());
+  $('#tax').text(getTaxTotal());
+  $('#grandtotal').text(getGrandTotal());
 }
